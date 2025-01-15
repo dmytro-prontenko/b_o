@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
@@ -11,7 +16,73 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
     <title>BANG & OLUFSEN</title>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <div class="header__wrapper">
+        <nav class="header__navigation">
+          <a href="/">
+            <div class="header__logo">
+              <img src="./assets/images/hero/Logo.webp" alt="Main logo" />
+            </div>
+          </a>
+          <div class="header__buttons-wrapper">
+            <button class="header__button">
+              <i class="fa-solid fa-phone"></i>
+            </button>
+            <button class="header__button header__menu-btn">
+              <div class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </button>
+          </div>
+        </nav>
+        <h1 class="hero__title">Your senses. <br />Set free.</h1>
+      </div>
+    </header>
+    <main></main>
+    <footer></footer>
+
+    <div class="mobile-menu">
+      <div class="mobile-menu__wrapper">
+        <div class="mobile-menu__header">
+          <a href="/" class="mobile-menu__logo"
+            ><div class="header__logo">
+              <img src="./assets/images/hero/Logo.webp" alt="Main logo" /></div
+          ></a>
+          <button class="mobile-menu__close mobile-menu__close-btn">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <nav class="mobile-menu__nav">
+          <a href="#reccomended" class="mobile-menu__nav-link">Recommended</a>
+          <a href="#categories" class="mobile-menu__nav-link">Categories</a>
+          <a href="#about" class="mobile-menu__nav-link">About Us</a>
+          <a href="#contacts" class="mobile-menu__nav-link">Contact Us</a>
+        </nav>
+        <div class="mobile-menu__contacts">
+          <div class="mobile-menu__phone">
+            <a href="tel:+12125357710" class="mobile-menu__phone"
+              >+1 212-535-7710</a
+            >
+          </div>
+          <div class="mobile-menu__action">Call to order</div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./js/mobile-menu.js"></script>
+    <script type="module" src="./js/index.js"></script>
+  </body>
 </html>
