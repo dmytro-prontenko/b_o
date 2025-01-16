@@ -222,6 +222,7 @@ button {
   width: 50%;
 }
 
+/* Базові стилі для контактів */
 .header__contacts-wrapper {
   position: relative;
   display: flex;
@@ -229,6 +230,7 @@ button {
 }
 
 .header__contacts {
+  display: none; /* Приховуємо за замовчуванням */
   position: absolute;
   right: 100%;
   top: 50%;
@@ -251,24 +253,16 @@ button {
   line-height: 16px; /* 133.333% */
   letter-spacing: 2px;
   text-transform: uppercase;
-  transform: translateX(20px);
+  transform: translategit ad dX(20px);
   transition: all 0.3s ease-in-out;
-}
-
-/* Мобільна версія (до 1024px) */
-@media screen and (max-width: 767px) {
-  .desktop-only {
-    display: none;
-  }
-
-  /* Додаємо JavaScript обробник для переходу до секції контактів */
-  .header__call-btn {
-    cursor: pointer;
-  }
 }
 
 /* Десктопна версія (від 1024px) */
 @media screen and (min-width: 1024px) {
+  .header__contacts {
+    display: block; /* Показуємо на десктопі */
+  }
+
   .header__contact:hover {
     transform: scale(1.05);
     color: var(--orange);
@@ -284,14 +278,15 @@ button {
   }
 }
 
-/* Анімація при наведенні */
-.header__contacts-wrapper:hover .header__contacts {
-  opacity: 1;
-  visibility: visible;
-}
+/* Мобільна версія (до 1024px) */
+@media screen and (max-width: 1023px) {
+  .header__contacts {
+    display: none !important; /* Примусово приховуємо на мобільній версії */
+  }
 
-.header__contacts-wrapper:hover .header__contact {
-  transform: translateX(0);
+  .header__call-btn {
+    cursor: pointer;
+  }
 }
 
 /* #endregion */
