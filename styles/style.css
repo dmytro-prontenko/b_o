@@ -31,6 +31,11 @@ html {
   overflow-x: hidden;
 }
 
+body {
+  /* Для плавного переходу при фіксації/розфіксації body */
+  transition: none;
+}
+
 h1,
 h2,
 h3,
@@ -247,21 +252,23 @@ button {
 /* #region Mobile Menu */
 .mobile-menu {
   position: fixed;
-  display: flex;
-  flex-direction: column;
   top: 0;
   right: 0;
+  bottom: 0;
+  left: 0;
   width: 100%;
   height: 100vh;
+  overflow-y: auto; /* Дозволяємо скролити меню, якщо контент не вміщується */
+  -webkit-overflow-scrolling: touch; /* Для плавного скролу на iOS */
   background-color: var(--white);
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
   z-index: 999;
-  margin: 0 auto;
 }
 
 .mobile-menu__wrapper {
   width: 100%;
+  min-height: 100vh;
   max-width: var(--max-mob-width);
   margin: 0 auto;
   padding: 24px var(--padding-side-mob);
@@ -373,6 +380,7 @@ button {
 body.menu-open {
   overflow: hidden;
 }
+
 /* #endregion */
 
 /* #region Recommended */
