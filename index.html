@@ -190,6 +190,49 @@
       </div>
     </section>
 
+    <section class="contacts" id="contacts">
+      <div class="contacts__wrapper">
+        <h2 class="contacts__title">Contact us</h2>
+        <form class="contacts__form" name="contact" method="POST" netlify>
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <textarea
+            name="message"
+            placeholder="Message"
+            rows="5"
+            required
+          ></textarea>
+          <button class="contacts__form-submit" type="submit">Send</button>
+        </form>
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <div class="contacts__item-label">Phone</div>
+            <a href="tel:+1 234 5555-55-55" class="contacts__link"
+              >+1 234 5555-55-55</a
+            >
+          </li>
+          <li class="contacts__item">
+            <div class="contacts__item-label">Email</div>
+            <a href="mailto:hello@nothing.com" class="contacts__link"
+              >hello@nothing.com</a
+            >
+          </li>
+          <li class="contacts__item">
+            <div class="contacts__item-label">Address</div>
+            <a
+              href="https://maps.app.goo.gl/jk2es7WwboCvt7ec9"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contacts__link"
+              >400 first ave. <br />
+              suite 700 <br />
+              Minneapolis, MN 55401</a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <div class="mobile-menu">
       <div class="mobile-menu__wrapper">
         <div class="mobile-menu__header">
