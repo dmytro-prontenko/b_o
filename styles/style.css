@@ -614,7 +614,7 @@ body.menu-open {
 }
 
 .categories__button:active {
-  background: var(--pressed-black); /* або інший колір за вашим вибором */
+  background: var(--pressed-black);
 }
 
 /* #endregion */
@@ -651,12 +651,14 @@ body.menu-open {
 
   @media screen and (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
+
     max-width: var(--max-tablet-width);
     padding: 73px var(--padding-side-tab);
     gap: 56px;
   }
 
   @media screen and (min-width: 1440px) {
+    gap: 111px;
     max-width: var(--max-desktop-width);
     padding: var(--padding-side-desk);
   }
@@ -680,6 +682,7 @@ body.menu-open {
 
   @media screen and (min-width: 1440px) {
     font-size: 48px;
+    width: 100%;
   }
 }
 
@@ -691,6 +694,195 @@ body.menu-open {
   font-weight: 400;
   line-height: 140%; /* 22.4px */
   letter-spacing: 0.15px;
+}
+
+/* #endregion */
+
+/* #region Contacts */
+.contacts__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "title"
+    "form"
+    "contacts";
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 48px;
+  width: 100%;
+  max-width: var(--max-mob-width);
+  margin: 0 auto;
+
+  padding: 64px var(--padding-side-mob);
+
+  @media screen and (min-width: 768px) {
+    max-width: var(--max-tablet-width);
+    padding: 120px var(--padding-side-tab);
+  }
+
+  @media screen and (min-width: 1440px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "title ."
+      "form contacts";
+    gap: 56px 111px;
+    max-width: var(--max-desktop-width);
+    padding: 120px var(--padding-side-desk);
+  }
+}
+
+.contacts__title {
+  grid-area: title;
+  color: var(--main-black);
+  font-family: Manrope;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px; /* 100% */
+
+  @media screen and (min-width: 768px) {
+    line-height: 48px; /* 100% */
+    font-size: 48px;
+    max-width: 392px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    max-width: 498px;
+  }
+}
+
+.contacts__list {
+  grid-area: contacts;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.contacts__list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+
+  @media screen and (min-width: 1440px) {
+    min-width: 237px;
+  }
+}
+
+.contacts__item-label {
+  color: #9393a3;
+  font-family: Manrope;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+  letter-spacing: 0.15px;
+}
+
+.contacts__subtitle {
+  color: var(--main-black);
+  font-family: Manrope, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px; /* 192.857% */
+}
+
+.contacts__link-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.contacts__link {
+  color: #191919;
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 22.4px */
+  letter-spacing: 0.15px;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.contacts__link:hover {
+  color: var(--orange);
+}
+
+.contacts__form {
+  grid-area: form;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+}
+
+.contacts__form input,
+.contacts__form textarea {
+  width: 100%;
+  background: #f8f8fa;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 16px;
+
+  color: var(--main-black);
+  font-family: Manrope, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 19.6px */
+  letter-spacing: 0.15px;
+
+  &:focus {
+    border-radius: 8px;
+    outline: 1px solid var(--orange);
+    background: var(--white);
+  }
+}
+
+.contacts__form textarea {
+  resize: none;
+  margin-bottom: 16px;
+}
+
+.contacts__form-submit {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+
+  padding: 15px 48px;
+  width: 100%;
+  border-radius: 8px;
+
+  color: #fff;
+  background: var(--orange);
+  text-align: center;
+  font-family: Manrope, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 27px; /* 168.75% */
+  transition: all 0.3s ease-in-out;
+}
+
+.contacts__form-submit:hover {
+  background: var(--main-black);
+}
+
+.contacts__form-submit:active {
+  background: var(--pressed-black);
 }
 
 /* #endregion */
